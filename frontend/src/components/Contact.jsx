@@ -1,7 +1,9 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import SayHeyModal from './SayHeyModal';
 
 export default function Contact({ data }) {
   const ref = useRef(null);
+  const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -98,14 +100,15 @@ export default function Contact({ data }) {
 
         {/* CTA */}
         <div className="reveal text-center">
-          <a href={`mailto:${data?.email || 'janakrishnan2172005@gmail.com'}`} className="btn-primary text-base px-10 py-4 inline-flex">
+          <button onClick={() => setModalOpen(true)} className="btn-primary text-base px-10 py-4 inline-flex">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
-            Say Hello
-          </a>
+            Say Hey 👋
+          </button>
         </div>
       </div>
+      <SayHeyModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
     </section>
   );
 }

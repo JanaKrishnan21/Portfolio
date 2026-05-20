@@ -53,7 +53,7 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className="hidden md:flex items-center gap-3">
-          <a href="mailto:janakrishnan2172005@gmail.com?subject=Hiring%20Opportunity" className="btn-primary text-xs py-2 px-4">
+          <a href="mailto:janakrishnan2172005@gmail.com" className="btn-primary text-xs py-2 px-4">
             Hire Me
           </a>
         </div>
