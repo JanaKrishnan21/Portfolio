@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import profileImg from '../assets/profile.jpg';
+import profileImg from '../assets/Profile img.jpeg';
 
 const TECH_BADGES = ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'MySQL', 'JavaScript'];
 
