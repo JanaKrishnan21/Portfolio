@@ -118,7 +118,7 @@ export const usePortfolio = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get('/api/portfolio', { timeout: 3000 });
+       const res = await axios.get('https://jana-portfolio-api.onrender.com/api/portfolio', { timeout: 5000 });
         if (res.data.success) {
           setData(res.data.data);
           setSource('api');
